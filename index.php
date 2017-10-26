@@ -7,10 +7,16 @@
 
 
 $test = $_GET['week'];
+$lesRooster = array(array("Maandag","Dinsdag","Woensdag"),array("Wiskunde","Natuurkunde",""),array("Thomas","Bas",""));
 
+if($test == "alles"){
+    dagen($test);
+    
+}else {
+        echo "geen rooster";
+}
 
-   $lesRooster = array(array("Maandag","Dinsdag","Woensdag"),array("Wiskunde","Natuurkunde",""),array("Thomas","Bas",""));
- dagen($test);      
+         
    // echo $lesRooster[0][];
     //echo $lesRooster[1][];
    // echo $lesRooster[2][];
@@ -20,7 +26,7 @@ $test = $_GET['week'];
 
         for($x=0;$x<3;$x++){
             echo "OO|";
-        echo $lesRooster[0][0];
+        echo $lesRooster[0][$x];
         }
     }
 
